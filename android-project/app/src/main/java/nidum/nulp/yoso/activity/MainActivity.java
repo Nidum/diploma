@@ -12,6 +12,8 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import nidum.nulp.yoso.activity.fragment.KanaFragment;
@@ -66,15 +68,12 @@ public class MainActivity extends AppCompatActivity {
     private void initKanaTable() {
         List<Kana> allKana = kanaRepository.getAllKana();
 
-        for (int i = 0; i < allKana.size(); i++) {
-            for (int j = 0; j < allKana.size(); j++) {
-                if (allKana.get(i).getOrder() < allKana.get(j).getOrder()) {
-                    Kana tmp = allKana.get(i);
-                    allKana.set(i, allKana.get(j));
-                    allKana.set(j, tmp);
-                }
+        Collections.sort(allKana, new Comparator<Kana>() {
+            @Override
+            public int compare(Kana o1, Kana o2) {
+                return o1.getOrder() - o2.getOrder();
             }
-        }
+        });
 
         for (int i = 0, j = 0; i < allKana.size(); i++) {
             TableRow row = new TableRow(this);
@@ -86,19 +85,7 @@ public class MainActivity extends AppCompatActivity {
             FragmentManager fragmentManager = getFragmentManager();
             do {
                 Kana kana = allKana.get(i);
-
-                String first;
-                String second;
-
-                if (isHiragana) {
-                    first = kana.getHiragana();
-                    second = kana.getKatakana();
-                } else {
-                    first = kana.getKatakana();
-                    second = kana.getHiragana();
-                }
-
-                Fragment fragment = KanaFragment.newInstance(R.drawable.sakura_fine, first, second, kana.getReading());
+                Fragment fragment = KanaFragment.newInstance(R.drawable.sakura_fine, kana, isHiragana);
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.add(row.getId(), fragment);
                 fragmentTransaction.commit();

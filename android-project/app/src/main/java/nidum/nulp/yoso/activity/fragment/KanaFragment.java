@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import nidum.nulp.yoso.activity.KanaAnimationActivity;
+import nidum.nulp.yoso.entity.Kana;
 import nidum.nulp.yoso_project.R;
 
 public class KanaFragment extends Fragment {
@@ -18,7 +19,9 @@ public class KanaFragment extends Fragment {
     public static final String ARG_KANA_CURRENT = "kana_current";
     public static final String ARG_KANA_OTHER = "kana_other";
     public static final String ARG_KANA_READING = "kana_reading";
+    public static final String ARG_KANA_ORDER = "kana_order";
     public static final String IS_KANA = "is_kana";
+    public static final String IS_HIRAGANA = "is_hiragana";
 
     private ImageView masteringImageView;
     private TextView currentKanaTextView;
@@ -27,13 +30,21 @@ public class KanaFragment extends Fragment {
 
     private Bundle arguments;
 
-    public static KanaFragment newInstance(int lvlImg, String kana1, String kana2, String kanaReading) {
+    public static KanaFragment newInstance(int lvlImg, Kana kana, boolean isHiragana) {
         KanaFragment fragment = new KanaFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_LEVEL_IMAGE, lvlImg);
-        args.putString(ARG_KANA_CURRENT, kana1);
-        args.putString(ARG_KANA_OTHER, kana2);
-        args.putString(ARG_KANA_READING, kanaReading);
+        if(isHiragana) {
+            args.putString(ARG_KANA_CURRENT, kana.getHiragana());
+            args.putString(ARG_KANA_OTHER, kana.getKatakana());
+        } else {
+            args.putString(ARG_KANA_CURRENT, kana.getKatakana());
+            args.putString(ARG_KANA_OTHER, kana.getHiragana());
+        }
+        args.putString(ARG_KANA_READING, kana.getReading());
+        args.putBoolean(IS_HIRAGANA, isHiragana);
+        args.putBoolean(IS_HIRAGANA, isHiragana);
+        args.putInt(ARG_KANA_ORDER, kana.getOrder());
         fragment.setArguments(args);
         return fragment;
     }
@@ -75,16 +86,5 @@ public class KanaFragment extends Fragment {
 
         return fragmentView;
     }
-
-//    @Override
-//    public void onAttach(Context context) {
-//        super.onAttach(context);
-//        if (context instanceof OnFragmentInteractionListener) {
-//            mListener = (OnFragmentInteractionListener) context;
-//        } else {
-//            throw new RuntimeException(context.toString()
-//                    + " must implement OnFragmentInteractionListener");
-//        }
-//    }
 
 }
