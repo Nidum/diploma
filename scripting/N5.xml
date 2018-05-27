@@ -1,0 +1,1094 @@
+<?xml version="1.0"?>
+ <Worksheet ss:Name="Лист1">
+  <Table ss:ExpandedColumnCount="4" ss:ExpandedRowCount="80" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Row ss:Height="31.5">
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Kanji</Data></Cell>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Onyomi</Data></Cell>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">Kunyomi</Data></Cell>
+    <Cell ss:StyleID="s16"><Data ss:Type="String">English</Data></Cell>
+   </Row>
+   <Row ss:Height="42.75">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">日</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ニチ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ジツ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ひ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">び</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">day, sun, Japan</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">一</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">イチ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">イツ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ヒト</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ひと</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">-</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">one</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">国</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">コク</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ク</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">country</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">人</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ジン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ニン</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ひと</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">り</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">person</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">年</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ネン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ト</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">year</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">大</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ダイ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">タイ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font><Font html:Color="#000000">オオ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">イ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">おお</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">- </Font><Font
+       html:Color="#000000">おお</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">きい</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">large, big</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">十</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ジュウ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ジッ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ジュッ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">とお</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">ten</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">二</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ニ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ジ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">フタタ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ふた</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ふた</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">つ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">two</Data></Cell>
+   </Row>
+   <Row ss:Height="128.25">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">本</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ホン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">モ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">book, present, main, true, real, counter for long things</Data></Cell>
+   </Row>
+   <Row ss:Height="71.25">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">中</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">チュウ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">アタ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">なか</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">うち</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">in, inside, middle, mean, center</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">長</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">チョウ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">オ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">なが</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">い</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">long, leader</Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">出</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">シュツ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">スイ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">イ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">ダ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">で</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">る</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font><Font html:Color="#000000">で</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">だ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">す</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">だ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">す</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">い</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">でる</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">exit, leave</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">三</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">サン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ゾウ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ミッ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">み</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">み</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">つ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">three</Data></Cell>
+   </Row>
+   <Row ss:Height="28.5">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">時</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ジ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">ド</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">とき</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">time, hour</Data></Cell>
+   </Row>
+   <Row ss:Height="120">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">行</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">コウ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ギョウ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">アン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">オコ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">ナ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">い</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">く</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ゆ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">く</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font><Font html:Color="#000000">ゆ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">き</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font><Font html:Color="#000000">ゆき</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">い</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">き</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">いき</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">おこな</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">う</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">going, journey</Data></Cell>
+   </Row>
+   <Row ss:Height="114">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">見</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">ケン</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">み</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">る</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">み</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">える</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">み</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">せる</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">see, hopes, chances, idea, opinion, look at, visible</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">月</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ゲツ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ガツ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ツ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">month, moon</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">後</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ゴ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">コウ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">オク</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">レ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">のち</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">うし</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">ろ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">うしろ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">あと</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">behind, back, later</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">前</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ゼン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">マ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">まえ</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">in front, before</Data></Cell>
+   </Row>
+   <Row ss:Height="300">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">生</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">セイ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ショウ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">い</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">きる</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">い</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">かす</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">い</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">ける</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">う</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">まれる</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">う</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">まれ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">うまれ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">う</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">む</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">お</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">う</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">は</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">える</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">は</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">やす</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">き</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">なま</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">なま</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">- </Font><Font html:Color="#000000">な</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">る</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">life, genuine, birth</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">五</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ゴ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">イツ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">いつ</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">five</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">間</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">カン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ケン</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">あいだ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ま</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">あい</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">interval, space</Data></Cell>
+   </Row>
+   <Row ss:Height="315">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">上</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ジョウ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ショウ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">シャン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ヨ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">うえ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">うえ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">うわ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">- </Font><Font
+       html:Color="#000000">かみ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">あ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">げる</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font><Font html:Color="#000000">あ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">げる</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">あ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">がる</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font><Font html:Color="#000000">あ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">がる</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">あ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">がり</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font><Font html:Color="#000000">あ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">がり</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">のぼ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">る</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">のぼ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">り</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">のぼ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">above, up</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">東</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">トウ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ヒガ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">east</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">四</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">シ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ヨ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">よ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">よ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">つ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">よっ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">つ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">four</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">今</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">コン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">キン</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">イ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">now</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">金</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">キン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">コン</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ゴン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">ガ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">かね</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">かな</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">-</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">gold</Data></Cell>
+   </Row>
+   <Row ss:Height="59.25">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">九</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">キュウ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ク</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ココノ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">ここの</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">nine</Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">入</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ニュウ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ジュ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ハイ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">い</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">る</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font><Font html:Color="#000000">い</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">る</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font><Font html:Color="#000000">い</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">り</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">い</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">れる</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font><Font html:Color="#000000">い</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">れ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">enter, insert</Data></Cell>
+   </Row>
+   <Row ss:Height="71.25">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">学</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ガク</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">マナ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">study, learning, science</Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">高</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">コウ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">タカ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">メ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">たか</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">い</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">たか</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">だか</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">たか</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">まる</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">tall, high, expensive</Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">円</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">エン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">マロ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">ヤ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">まる</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">い</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">まる</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">まど</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">まど</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">か</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">circle, yen, round</Data></Cell>
+   </Row>
+   <Row ss:Height="142.5">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">子</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">シ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ス</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ツ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">こ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">こ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">child, sign of the rat, 11PM-1AM, first sign of Chinese zodiac</Data></Cell>
+   </Row>
+   <Row ss:Height="105">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">外</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ガイ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ゲ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">そと</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ほか</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">はず</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">す</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">はず</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">れる</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">と</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">outside</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">八</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ハチ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ヨ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">や</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">や</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">つ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">やっ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">つ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">eight</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">六</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ロク</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">リク</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ム</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">む</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">む</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">つ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">むっ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">つ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">six</Data></Cell>
+   </Row>
+   <Row ss:Height="285">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">下</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">カ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ゲ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">オ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">リ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">した</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">しも</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">もと</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">さ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">げる</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">さ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">がる</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">くだ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">る</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">くだ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">り</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">くだ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">す</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">くだ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">す</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">くだ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">さる</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">お</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">ろす</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">below, down, descend, give, low, inferior</Data></Cell>
+   </Row>
+   <Row ss:Height="135">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">来</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ライ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">タイ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">く</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">る</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">きた</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">る</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">きた</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">す</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">き</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">たす</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">き</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">たる</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">き</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">come, due, next, cause, become</Data></Cell>
+   </Row>
+   <Row ss:Height="28.5">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">気</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">キ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ケ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">いき</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">spirit, mind</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">小</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">ショウ</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ちい</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">さい</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">こ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">- </Font><Font
+       html:Color="#000000">お</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">- </Font><Font html:Color="#000000">さ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">little, small</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">七</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">シチ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ナ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">なな</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">なな</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font><Font html:Color="#000000">つ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">seven</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">山</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">サン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">セン</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ヤ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">mountain</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">話</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">ワ</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">はな</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">す</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">はなし</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">tale, talk</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">女</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ジョ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ニョ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ニョウ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">おんな</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">woman, female</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">北</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ホク</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">キ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">north</Data></Cell>
+   </Row>
+   <Row ss:Height="171">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">午</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">ゴ</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">うま</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">noon, sign of the horse, 11AM-1PM, seventh sign of Chinese zodiac</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">百</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ヒャク</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ビャク</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">モ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">hundred</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">書</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ショ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">ガ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">か</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">く</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font><Font html:Color="#000000">が</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">き</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">write</Data></Cell>
+   </Row>
+   <Row ss:Height="99.75">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">先</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">セン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">マ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">さき</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">before, ahead, previous, future, precedence</Data></Cell>
+   </Row>
+   <Row ss:Height="85.5">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">名</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">メイ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ミョウ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> -</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">な</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">name, noted, distinguished, reputation</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">川</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">セン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">カ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">stream, river</Data></Cell>
+   </Row>
+   <Row ss:Height="28.5">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">千</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">セン</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">thousand</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">水</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">スイ</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">みず</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">みず</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">water</Data></Cell>
+   </Row>
+   <Row ss:Height="85.5">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">半</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ハン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ナカ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">half, middle, odd number, semi-, part-</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">男</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ダン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ナン</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">おとこ</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">male</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">西</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">セイ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">サイ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ス</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ニ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">west, Spain</Data></Cell>
+   </Row>
+   <Row ss:Height="28.5">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">電</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">デン</Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">electricity</Data></Cell>
+   </Row>
+   <Row ss:Height="85.5">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">校</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">コウ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">キョ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">exam, school, printing, proof, correction</Data></Cell>
+   </Row>
+   <Row ss:Height="71.25">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">語</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">ゴ</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">かた</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">る</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">かた</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">らう</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">word, speech, language</Data></Cell>
+   </Row>
+   <Row ss:Height="71.25">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">土</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ド</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ト</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ツ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">soil, earth, ground, Turkey</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">木</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ボク</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">モク</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">き</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">こ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">tree, wood</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">聞</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ブン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">モン</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">き</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">く</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">き</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">こえる</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">hear, ask, listen</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">食</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ショク</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ジキ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ハ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">く</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">う</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">く</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">らう</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">た</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">べる</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">eat, food</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">車</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">シャ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">クル</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">car</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">何</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">カ</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">なに</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">なん</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">なに</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">- </Font><Font
+       html:Color="#000000">なん</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">what</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">南</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ナン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ナ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ミナ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">south</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">万</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">マン</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">バン</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ヨロ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">ten thousand</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">毎</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">マイ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">ゴト</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">ごと</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">every</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">白</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ハク</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ビャク</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">シロ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">しろ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">しら</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">-</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">white</Data></Cell>
+   </Row>
+   <Row ss:Height="57">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">天</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">テン</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">あまつ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">あめ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">あま</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">heavens, sky, imperial</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">母</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">ボ</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">はは</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">も</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">mama, mother</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">火</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">カ</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ひ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">び</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ほ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">-</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">fire</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">右</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ウ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ユウ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ミ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">right</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">読</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ドク</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">トク</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">トウ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> -</Font><Font
+       html:Color="#000000">ヨ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">.</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">よ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">む</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">read</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">友</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">ユウ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">ト</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">friend</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">左</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">サ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">シャ</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">ヒダ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s19"/>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">left</Data></Cell>
+   </Row>
+   <Row ss:Height="90">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">休</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">キュウ</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">やす</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">む</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">やす</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">まる</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000"> </Font><Font html:Color="#000000">やす</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000">.</Font><Font
+       html:Color="#000000">める</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">rest, day off, retire, sleep</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">父</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">フ</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">ちち</Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">father</Data></Cell>
+   </Row>
+   <Row ss:Height="45">
+    <Cell ss:StyleID="s17"><Data ss:Type="String">雨</Data></Cell>
+    <Cell ss:StyleID="s17"><Data ss:Type="String">ウ</Data></Cell>
+    <Cell ss:StyleID="s17"><ss:Data ss:Type="String"
+      xmlns="http://www.w3.org/TR/REC-html40"><Font html:Color="#000000">あめ</Font><Font
+       html:Face="Arial" x:CharSet="204" x:Family="Swiss" html:Color="#000000"> </Font><Font
+       html:Color="#000000">あま</Font><Font html:Face="Arial" x:CharSet="204"
+       x:Family="Swiss" html:Color="#000000">- -</Font><Font html:Color="#000000">さめ</Font></ss:Data></Cell>
+    <Cell ss:StyleID="s18"><Data ss:Type="String">rain</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+</Workbook>
