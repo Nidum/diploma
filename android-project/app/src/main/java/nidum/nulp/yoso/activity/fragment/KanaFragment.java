@@ -18,6 +18,7 @@ public class KanaFragment extends Fragment {
     public static final String ARG_KANA_CURRENT = "kana_current";
     public static final String ARG_KANA_OTHER = "kana_other";
     public static final String ARG_KANA_READING = "kana_reading";
+    public static final String IS_KANA = "is_kana";
 
     private ImageView masteringImageView;
     private TextView currentKanaTextView;
@@ -62,6 +63,7 @@ public class KanaFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), KanaAnimationActivity.class);
                 intent.putExtra(ARG_KANA_CURRENT, currentKanaTextView.getText());
                 intent.putExtra(ARG_KANA_READING, readingTextView.getText());
+                intent.putExtra(IS_KANA, true);
                 startActivity(intent);
             }
         });

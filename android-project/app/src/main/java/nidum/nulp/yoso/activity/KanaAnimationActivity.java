@@ -1,14 +1,20 @@
 package nidum.nulp.yoso.activity;
 
+import android.animation.AnimatorInflater;
+import android.animation.AnimatorSet;
 import android.app.Activity;
-import android.content.res.Resources;
+import android.content.Intent;
 import android.graphics.Path;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -26,13 +32,25 @@ import nidum.nulp.yoso_project.R;
 import static nidum.nulp.yoso.kanjivg.DurationGenerator.getDuration;
 
 public class KanaAnimationActivity extends AppCompatActivity {
-
     private LinearLayout layout;
     private KanaPathProvider kanaPathProvider;
+    private View mCardFrontLayout;
+    private View mCardBackLayout;
+    private TextView kanjiView;
+    private TextView meaningView;
+    private TextView onView;
+    private TextView kunView;
+    private FloatingActionButton playFab;
+    private ImageView levelImg;
 
     private String currentKana;
-    private String currentKanaReading;
+    private String readingKana;
+    private boolean singleReading;
     private boolean animationFinished = false;
+
+    private AnimatorSet mSetRightOut;
+    private AnimatorSet mSetLeftIn;
+    private boolean mIsBackVisible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +59,15 @@ public class KanaAnimationActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         kanaPathProvider = new KanaPathProvider(this);
-        currentKana = getIntent().getStringExtra(KanaFragment.ARG_KANA_CURRENT);
-        currentKanaReading = getIntent().getStringExtra(KanaFragment.ARG_KANA_READING);
+
+        Intent intent = getIntent();
+        currentKana = intent.getStringExtra(KanaFragment.ARG_KANA_CURRENT);
+        readingKana = intent.getStringExtra(KanaFragment.ARG_KANA_READING);
+        singleReading = intent.getBooleanExtra(KanaFragment.IS_KANA, true);
+
+        findViews();
+        loadAnimations();
+        changeCameraDistance();
     }
 
     @Override
@@ -62,14 +87,27 @@ public class KanaAnimationActivity extends AppCompatActivity {
         } catch (IOException | XmlPullParserException e) {
             e.printStackTrace();
         }
-     //   TextView readingView = findViewById(R.id.reading_text_view);
-      //  readingView.setText(currentKanaReading);
 
         initPathView(pathView, paths);
+        initText();
+    }
+
+    private void initText(){
+        if(singleReading){
+            kanjiView.setText(currentKana);
+            onView.setText(readingKana);
+            onView.setTextSize(36);
+            kunView.setVisibility(View.INVISIBLE);
+            meaningView.setVisibility(View.INVISIBLE);
+            kanjiView.setPadding(0, 250, 0, 0);
+            levelImg.setPadding(0, 250, 0, 0);
+        } else {
+
+        }
     }
 
     private void initPathView(PathView pathView, final List<Path> paths) {
-        float duration = getDuration(paths, 1.1f);
+        final float duration = getDuration(paths, 1.1f);
 
         pathView.setPathWidth(16);
         pathView.setPaths(paths);
@@ -95,35 +133,80 @@ public class KanaAnimationActivity extends AppCompatActivity {
 
         final Activity parent = this;
 
-        pathView.setOnClickListener(new View.OnClickListener() {
+        playFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PathView animationView = parent.findViewById(R.id.path_view);
                 if (animationFinished) {
-                    animationView.setId(View.generateViewId());
-                    layout.removeView(animationView);
+                    FrameLayout drawingView = findViewById(R.id.card_front);
+                    drawingView.removeAllViews();
+                    LayoutInflater inflater = (LayoutInflater) parent.getSystemService(LAYOUT_INFLATER_SERVICE);
+                    View childLayout = inflater.inflate(R.layout.card_front,
+                           null);
+                    drawingView.addView(childLayout);
 
-                    PathView pathView = new PathView(parent);
-                    pathView.setId(R.id.path_view);
+                    PathView pathView = parent.findViewById(R.id.path_view);
                     initPathView(pathView, paths);
-                    layout.addView(pathView, 1);
-
-                    Resources resources = getApplicationContext().getResources();
-
-                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
-                            LinearLayout.LayoutParams.WRAP_CONTENT
-                    );
-                    int margin = resources.getDimensionPixelSize(R.dimen.common_margin);
-                    params.setMargins(margin, margin, margin, margin);
-
-                    //ViewGroup.LayoutParams layoutParams = pathView.getLayoutParams();
-                    params.height = resources.getDimensionPixelSize(R.dimen.kana_drawing_canvas_height);
-
-                    pathView.setLayoutParams(params);
+                    pathView.getSequentialPathAnimator()
+                            .delay(300)
+                            .duration((int) duration)
+                            .interpolator(new AccelerateDecelerateInterpolator())
+                            .listenerStart(new PathView.AnimatorBuilder.ListenerStart() {
+                                @Override
+                                public void onAnimationStart() {
+                                    animationFinished = false;
+                                }
+                            })
+                            .listenerEnd(new PathView.AnimatorBuilder.ListenerEnd() {
+                                @Override
+                                public void onAnimationEnd() {
+                                    animationFinished = true;
+                                }
+                            })
+                            .start();
                 }
             }
         });
+    }
+
+    private void changeCameraDistance() {
+        int distance = 8000;
+        float scale = getResources().getDisplayMetrics().density * distance;
+        mCardFrontLayout.setCameraDistance(scale);
+        mCardBackLayout.setCameraDistance(scale);
+    }
+
+    private void loadAnimations() {
+        mSetRightOut = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.out_animation);
+        mSetLeftIn = (AnimatorSet) AnimatorInflater.loadAnimator(this, R.animator.in_animation);
+    }
+
+    private void findViews() {
+        mCardBackLayout = findViewById(R.id.card_back);
+        mCardFrontLayout = findViewById(R.id.card_front);
+        playFab = findViewById(R.id.fab);
+        kanjiView  = findViewById(R.id.kanjiView);
+        meaningView = findViewById(R.id.meaningView);
+        onView = findViewById(R.id.onView);
+        kunView = findViewById(R.id.kunView);
+        levelImg = findViewById(R.id.levelImg);
+    }
+
+    public void flipCard(View view) {
+        if (!mIsBackVisible) {
+            mSetRightOut.setTarget(mCardFrontLayout);
+            mSetLeftIn.setTarget(mCardBackLayout);
+            mSetRightOut.start();
+            mSetLeftIn.start();
+            playFab.setVisibility(View.INVISIBLE);
+            mIsBackVisible = true;
+        } else {
+            mSetRightOut.setTarget(mCardBackLayout);
+            mSetLeftIn.setTarget(mCardFrontLayout);
+            mSetRightOut.start();
+            mSetLeftIn.start();
+            playFab.setVisibility(View.VISIBLE);
+            mIsBackVisible = false;
+        }
     }
 
 }

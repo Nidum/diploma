@@ -47,10 +47,10 @@ public class KanaPathProvider {
             xml.next();
         }
 
-        return PathParser.parse(builder.toString(), getResizeCoeficient(width), 100.0f, 0.0f);
+        return PathParser.parse(builder.toString(), getResizeCoeficient(width), 200.0f, -140.0f);
     }
 
     private float getResizeCoeficient(int screenWidth){
-        return 7.0f;
+        return 8.5f;
     }
 }
