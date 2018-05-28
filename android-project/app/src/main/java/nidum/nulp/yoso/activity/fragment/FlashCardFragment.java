@@ -6,7 +6,6 @@ import android.content.Context;
 import android.graphics.Path;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,12 +22,10 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.List;
 
-import nidum.nulp.yoso.activity.KanaAnimationActivity;
 import nidum.nulp.yoso.entity.Kana;
 import nidum.nulp.yoso.kanjivg.KanaPathProvider;
 import nidum.nulp.yoso_project.R;
 
-import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 import static nidum.nulp.yoso.kanjivg.DurationGenerator.getDuration;
 
 public class FlashCardFragment extends Fragment {
@@ -46,7 +43,6 @@ public class FlashCardFragment extends Fragment {
     private TextView onView;
     private TextView kunView;
     private ImageView levelImg;
-    private PathView pathView;
 
     private boolean mIsBackVisible = false;
     private FrameLayout mCardFrontLayout;
@@ -60,7 +56,8 @@ public class FlashCardFragment extends Fragment {
     private List<Path> paths;
     private float duration;
 
-    public FlashCardFragment() {}
+    public FlashCardFragment() {
+    }
 
     public static FlashCardFragment newInstance(Kana kana, boolean isHiragana) {
         FlashCardFragment fragment = new FlashCardFragment();
@@ -166,20 +163,11 @@ public class FlashCardFragment extends Fragment {
     }
 
     public void setFabClickListener() {
-        //animationFinished = true;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (animationFinished) {
-//                    mCardFrontLayout.removeAllViews();
-//                    LayoutInflater inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
-//                    View childLayout = inflater.inflate(R.layout.card_front,null);
-//                    mCardFrontLayout.addView(childLayout);
-//                    fab = childLayout.findViewById(R.id.fab);
-//                    setFabClickListener();
-//
                     PathView pathView = mCardFrontLayout.findViewById(R.id.path_view);
-//                    initPathView(pathView);
                     animatePath(pathView, duration);
                 }
             }

@@ -15,13 +15,11 @@ import nidum.nulp.yoso.repository.KanaRepository;
 
 public class KanaFragmentPagerAdapter extends FragmentPagerAdapter {
 
-    private FloatingActionButton fab;
     private List<Kana> kanaList;
     private boolean isHiragana;
 
-    public KanaFragmentPagerAdapter(FragmentManager fm, FloatingActionButton fab, KanaRepository kanaRepository, boolean isHiragana) {
+    public KanaFragmentPagerAdapter(FragmentManager fm, KanaRepository kanaRepository, boolean isHiragana) {
         super(fm);
-        this.fab = fab;
         kanaList = kanaRepository.getAllKana();
         Collections.sort(kanaList, new Comparator<Kana>() {
             @Override
@@ -48,5 +46,9 @@ public class KanaFragmentPagerAdapter extends FragmentPagerAdapter {
 
     public void setHiragana(boolean hiragana) {
         isHiragana = hiragana;
+    }
+
+    public List<Kana> getKanaList() {
+        return kanaList;
     }
 }

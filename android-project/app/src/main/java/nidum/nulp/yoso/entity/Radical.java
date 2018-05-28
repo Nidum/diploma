@@ -1,5 +1,6 @@
 package nidum.nulp.yoso.entity;
-import java.util.Date;
+
+import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 
 public class Radical {
     private String radical;

@@ -90,7 +90,8 @@ public class MainActivity extends AppCompatActivity {
             FragmentManager fragmentManager = getFragmentManager();
             do {
                 Kana kana = allKana.get(i);
-                KanaFragment fragment = KanaFragment.newInstance(R.drawable.sakura_fine, kana, this.isHiragana);
+
+                KanaFragment fragment = KanaFragment.newInstance(kana, this.isHiragana);
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.add(row.getId(), fragment);
                 fragmentTransaction.commit();
@@ -106,4 +107,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onRestart() {
+        super.onRestart();
+        finish();
+        startActivity(getIntent());
+    }
 }

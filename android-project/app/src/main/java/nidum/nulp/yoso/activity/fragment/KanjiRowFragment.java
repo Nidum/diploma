@@ -69,7 +69,7 @@ public class KanjiRowFragment extends Fragment {
 //        layout.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), KanaAnimationActivity.class);
+//                Intent intent = new Intent(getActivity(), HieroglyphAnimationActivity.class);
 //                intent.putExtra(ARG_READING, meaningTextView.getText());
 //                intent.putExtra(ARG_KANJI, readingTextView.getText());
 //                startActivity(intent);

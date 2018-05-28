@@ -9,18 +9,19 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import nidum.nulp.yoso.activity.KanaAnimationActivity;
+import nidum.nulp.yoso.activity.HieroglyphAnimationActivity;
 import nidum.nulp.yoso.entity.Kana;
+import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 import nidum.nulp.yoso_project.R;
 
 public class KanaFragment extends Fragment {
 
-    public static final String ARG_LEVEL_IMAGE = "lvl_img";
     public static final String ARG_KANA_CURRENT = "kana_current";
     public static final String ARG_KANA_OTHER = "kana_other";
     public static final String ARG_KANA_READING = "kana_reading";
     public static final String ARG_KANA_ORDER = "kana_order";
     public static final String IS_HIRAGANA = "is_hiragana";
+    public static final String ARG_STUDY_LEVEL = "noryoku_level";
 
     private ImageView masteringImageView;
     private TextView currentKanaTextView;
@@ -29,16 +30,17 @@ public class KanaFragment extends Fragment {
 
     private Bundle arguments;
 
-    public static KanaFragment newInstance(int lvlImg, Kana kana, boolean isHiragana) {
+    public static KanaFragment newInstance(Kana kana, boolean isHiragana) {
         KanaFragment fragment = new KanaFragment();
         Bundle args = new Bundle();
-        args.putInt(ARG_LEVEL_IMAGE, lvlImg);
         if(isHiragana) {
             args.putString(ARG_KANA_CURRENT, kana.getHiragana());
             args.putString(ARG_KANA_OTHER, kana.getKatakana());
+            args.putInt(ARG_STUDY_LEVEL, kana.getHiraganaStudyLevel().ordinal());
         } else {
             args.putString(ARG_KANA_CURRENT, kana.getKatakana());
             args.putString(ARG_KANA_OTHER, kana.getHiragana());
+            args.putInt(ARG_STUDY_LEVEL, kana.getKatakanaStudyLevel().ordinal());
         }
         args.putString(ARG_KANA_READING, kana.getReading());
         args.putBoolean(IS_HIRAGANA, isHiragana);
@@ -57,7 +59,7 @@ public class KanaFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         View fragmentView = inflater.inflate(R.layout.fragment_kana, container, false);
         masteringImageView = fragmentView.findViewById(R.id.level_image_view);
@@ -69,7 +71,7 @@ public class KanaFragment extends Fragment {
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), KanaAnimationActivity.class);
+                Intent intent = new Intent(getActivity(), HieroglyphAnimationActivity.class);
                 intent.putExtra(ARG_KANA_CURRENT, currentKanaTextView.getText());
                 intent.putExtra(ARG_KANA_READING, readingTextView.getText());
                 intent.putExtra(ARG_KANA_ORDER, arguments.getInt(ARG_KANA_ORDER));
@@ -78,7 +80,7 @@ public class KanaFragment extends Fragment {
             }
         });
 
-        masteringImageView.setImageResource(arguments.getInt(ARG_LEVEL_IMAGE));
+        masteringImageView.setImageResource(StudyLevel.values()[arguments.getInt(ARG_STUDY_LEVEL)].getImageId());
         currentKanaTextView.setText(arguments.getString(ARG_KANA_CURRENT));
         otherKanaTextView.setText(arguments.getString(ARG_KANA_OTHER));
         readingTextView.setText(arguments.getString(ARG_KANA_READING));

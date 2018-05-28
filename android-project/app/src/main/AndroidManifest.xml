@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="nidum.nulp.yoso.activity.KanaAnimationActivity"
+            android:name="nidum.nulp.yoso.activity.HieroglyphAnimationActivity"
             android:label="@string/title_activity_kana_animation"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

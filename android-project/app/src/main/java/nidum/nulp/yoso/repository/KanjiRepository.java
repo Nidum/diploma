@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import nidum.nulp.yoso.entity.Kanji;
-import nidum.nulp.yoso.entity.Radical;
-import nidum.nulp.yoso.entity.StudyLevel;
+import nidum.nulp.yoso.entity.enumeration.NoryokuLevel;
+import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 
 public class KanjiRepository {
     private static String KANJI_TABLE = "kanji";
@@ -40,7 +40,8 @@ public class KanjiRepository {
                 String onReading = cursor.getString(cursor.getColumnIndex(ONYOMI_READING_COLUMN));
                 String kunReading = cursor.getString(cursor.getColumnIndex(KUNYOMI_READING_COLUMN));
                 String meaning = cursor.getString(cursor.getColumnIndex(MEANING_COLUMN));
-                int noryokuLevel = cursor.getInt(cursor.getColumnIndex(NORYOKU_LEVEL_COLUMN));
+                int noryokuLevelNumber = cursor.getInt(cursor.getColumnIndex(NORYOKU_LEVEL_COLUMN));
+                NoryokuLevel noryokuLevel = NoryokuLevel.values()[noryokuLevelNumber];
                 long lastReviewed = cursor.getLong(cursor.getColumnIndex(LAST_REVIEWED_COLUMN));
 
                 int studyLevelNumber = cursor.getInt(cursor.getColumnIndex(STUDY_LEVEL_COLUMN));

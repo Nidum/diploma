@@ -36,8 +36,10 @@ public class DBHelper extends SQLiteOpenHelper {
                 + "hiragana TEXT,"
                 + "katakana TEXT,"
                 + "alphabetic_order INTEGER,"
-                + "last_reviewed INTEGER,"
-                + "study_level INTEGER );");
+                + "last_reviewed_hiragana INTEGER,"
+                + "study_level_hiragana INTEGER, "
+                + "last_reviewed_katakana INTEGER,"
+                + "study_level_katakana INTEGER);");
 
         db.execSQL("CREATE TABLE radicals ("
                 +" id INTEGER PRIMARY KEY AUTOINCREMENT,"

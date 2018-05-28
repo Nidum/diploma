@@ -3,16 +3,11 @@ package nidum.nulp.yoso.repository;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
-import nidum.nulp.yoso.entity.Kana;
 import nidum.nulp.yoso.entity.Radical;
-import nidum.nulp.yoso.entity.StudyLevel;
+import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 
 public class RadicalsRepository {
     private static String RADICALS_TABLE = "radicals";

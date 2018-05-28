@@ -1,18 +1,21 @@
 package nidum.nulp.yoso.entity;
 
+import nidum.nulp.yoso.entity.enumeration.NoryokuLevel;
+import nidum.nulp.yoso.entity.enumeration.StudyLevel;
+
 public class Kanji {
     private String kanji;
     private String onyomiReading;
     private String kunyomiReading;
     private String meaning;
-    private int noryokuLevel;
+    private NoryokuLevel noryokuLevel;
     private long lastReviewed;
     private StudyLevel studyLevel;
 
     public Kanji() {
     }
 
-    public Kanji(String kanji, String onyomiReading, String kunyomiReading, String meaning, int noryokuLevel, long lastReviewed, StudyLevel studyLevel) {
+    public Kanji(String kanji, String onyomiReading, String kunyomiReading, String meaning, NoryokuLevel noryokuLevel, long lastReviewed, StudyLevel studyLevel) {
         this.kanji = kanji;
         this.onyomiReading = onyomiReading;
         this.kunyomiReading = kunyomiReading;
@@ -54,11 +57,11 @@ public class Kanji {
         this.meaning = meaning;
     }
 
-    public int getNoryokuLevel() {
+    public NoryokuLevel getNoryokuLevel() {
         return noryokuLevel;
     }
 
-    public void setNoryokuLevel(int noryokuLevel) {
+    public void setNoryokuLevel(NoryokuLevel noryokuLevel) {
         this.noryokuLevel = noryokuLevel;
     }
 
