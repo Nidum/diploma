@@ -37,8 +37,6 @@ public class KanaFragmentPagerAdapter extends FragmentPagerAdapter {
         Kana kana = kanaList.get(position);
 
         FlashCardFragment flashCardFragment = FlashCardFragment.newInstance(kana, isHiragana);
-        flashCardFragment.setFab(fab);
-
         return flashCardFragment;
     }
 
@@ -46,5 +44,9 @@ public class KanaFragmentPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return kanaList.size();
+    }
+
+    public void setHiragana(boolean hiragana) {
+        isHiragana = hiragana;
     }
 }

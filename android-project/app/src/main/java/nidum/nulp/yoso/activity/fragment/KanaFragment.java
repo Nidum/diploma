@@ -20,7 +20,6 @@ public class KanaFragment extends Fragment {
     public static final String ARG_KANA_OTHER = "kana_other";
     public static final String ARG_KANA_READING = "kana_reading";
     public static final String ARG_KANA_ORDER = "kana_order";
-    public static final String IS_KANA = "is_kana";
     public static final String IS_HIRAGANA = "is_hiragana";
 
     private ImageView masteringImageView;
@@ -42,7 +41,6 @@ public class KanaFragment extends Fragment {
             args.putString(ARG_KANA_OTHER, kana.getHiragana());
         }
         args.putString(ARG_KANA_READING, kana.getReading());
-        args.putBoolean(IS_HIRAGANA, isHiragana);
         args.putBoolean(IS_HIRAGANA, isHiragana);
         args.putInt(ARG_KANA_ORDER, kana.getOrder());
         fragment.setArguments(args);
@@ -74,7 +72,8 @@ public class KanaFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), KanaAnimationActivity.class);
                 intent.putExtra(ARG_KANA_CURRENT, currentKanaTextView.getText());
                 intent.putExtra(ARG_KANA_READING, readingTextView.getText());
-                intent.putExtra(IS_KANA, true);
+                intent.putExtra(ARG_KANA_ORDER, arguments.getInt(ARG_KANA_ORDER));
+                intent.putExtra(IS_HIRAGANA, arguments.getBoolean(IS_HIRAGANA));
                 startActivity(intent);
             }
         });
@@ -87,4 +86,7 @@ public class KanaFragment extends Fragment {
         return fragmentView;
     }
 
+    public void updateIsHiragana(){
+        this.arguments.putBoolean(IS_HIRAGANA, !arguments.getBoolean(IS_HIRAGANA));
+    }
 }

@@ -27,9 +27,6 @@ public class KanaAnimationActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
-//        char currentKana = intent.getStringExtra(KanaFragment.ARG_KANA_CURRENT).charAt(0);
-////        String readingKana = intent.getStringExtra(KanaFragment.ARG_KANA_READING);
-//        boolean singleReading = intent.getBooleanExtra(KanaFragment.IS_KANA, true);
         boolean isHiragana = intent.getBooleanExtra(KanaFragment.IS_HIRAGANA, true);
         int position = intent.getIntExtra(KanaFragment.ARG_KANA_ORDER, 0) - 1;
 
@@ -37,25 +34,7 @@ public class KanaAnimationActivity extends AppCompatActivity {
         pagerAdapter = new KanaFragmentPagerAdapter(getSupportFragmentManager(), playFab, new KanaRepository(new DBHelper(this)), isHiragana);
         pager.setAdapter(pagerAdapter);
         pager.setCurrentItem(position);
-
-        pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageSelected(int position) {
-                System.out.println("In page selected");
-            }
-
-            @Override
-            public void onPageScrolled(int position, float positionOffset,
-                                       int positionOffsetPixels) {
-                System.out.println("In page scrolled");
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-                System.out.println("In page scroll state changed");
-            }
-        });
-
+        pager.setOffscreenPageLimit(0);
     }
 
     @Override
@@ -67,5 +46,4 @@ public class KanaAnimationActivity extends AppCompatActivity {
         playFab = findViewById(R.id.fab);
         pager = findViewById(R.id.pager);
     }
-
 }

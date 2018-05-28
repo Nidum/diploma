@@ -32,6 +32,8 @@ import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 import static nidum.nulp.yoso.kanjivg.DurationGenerator.getDuration;
 
 public class FlashCardFragment extends Fragment {
+    private boolean animationFinished = true;
+
     private Context context;
     private FrameLayout layout;
 
@@ -44,20 +46,21 @@ public class FlashCardFragment extends Fragment {
     private TextView onView;
     private TextView kunView;
     private ImageView levelImg;
+    private PathView pathView;
 
     private boolean mIsBackVisible = false;
-    private View mCardFrontLayout;
-    private View mCardBackLayout;
+    private FrameLayout mCardFrontLayout;
+    private FrameLayout mCardBackLayout;
     private FloatingActionButton fab;
 
-    private boolean animationFinished = true;
     private Kana kana;
     private boolean isHiragana;
     private boolean singleReading = true;
 
-    public FlashCardFragment() {
+    private List<Path> paths;
+    private float duration;
 
-    }
+    public FlashCardFragment() {}
 
     public static FlashCardFragment newInstance(Kana kana, boolean isHiragana) {
         FlashCardFragment fragment = new FlashCardFragment();
@@ -75,15 +78,8 @@ public class FlashCardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         context = container.getContext();
-        View fragmentView = inflater.inflate(R.layout.fragment_flash_card, container, false);// Inflate the layout for this fragment
-        mCardBackLayout = fragmentView.findViewById(R.id.card_back);
-        mCardFrontLayout = fragmentView.findViewById(R.id.card_front);
-        kanjiView = fragmentView.findViewById(R.id.kanjiView);
-        meaningView = fragmentView.findViewById(R.id.meaningView);
-        onView = fragmentView.findViewById(R.id.onView);
-        kunView = fragmentView.findViewById(R.id.kunView);
-        levelImg = fragmentView.findViewById(R.id.levelImg);
-        layout = fragmentView.findViewById(R.id.layout);
+        View fragmentView = inflater.inflate(R.layout.fragment_flash_card, container, false);
+        findViews(fragmentView);
 
         final FlashCardFragment that = this;
         layout.setOnClickListener(new View.OnClickListener() {
@@ -93,28 +89,44 @@ public class FlashCardFragment extends Fragment {
             }
         });
 
-        kanaPathProvider = new KanaPathProvider(fragmentView.getContext());
-
         loadAnimations(fragmentView.getContext());
         changeCameraDistance();
 
         PathView pathView = fragmentView.findViewById(R.id.path_view);
         layout = fragmentView.findViewById(R.id.animation_layout);
-        List<Path> paths = null;
+        kanaPathProvider = new KanaPathProvider(context);
+
         try {
             if (isHiragana) {
                 paths = kanaPathProvider.buildPaths(kana.getHiragana().charAt(0), 350);
             } else {
                 paths = kanaPathProvider.buildPaths(kana.getKatakana().charAt(0), 350);
             }
+            duration = getDuration(paths, 1.1f);
         } catch (IOException | XmlPullParserException e) {
             e.printStackTrace();
         }
 
-        initPathView(pathView, paths);
+        initPathView(pathView);
+        setFabClickListener();
+        pathView.getPathAnimator()
+                .duration(0)
+                .start();
         initText();
 
         return fragmentView;
+    }
+
+    private void findViews(View fragmentView) {
+        mCardBackLayout = fragmentView.findViewById(R.id.card_back);
+        mCardFrontLayout = fragmentView.findViewById(R.id.card_front);
+        kanjiView = fragmentView.findViewById(R.id.kanjiView);
+        meaningView = fragmentView.findViewById(R.id.meaningView);
+        onView = fragmentView.findViewById(R.id.onView);
+        kunView = fragmentView.findViewById(R.id.kunView);
+        levelImg = fragmentView.findViewById(R.id.levelImg);
+        layout = fragmentView.findViewById(R.id.layout);
+        fab = fragmentView.findViewById(R.id.fab);
     }
 
     private void changeCameraDistance() {
@@ -147,13 +159,29 @@ public class FlashCardFragment extends Fragment {
         }
     }
 
-    public void setFab(FloatingActionButton fab) {
-        this.fab = fab;
-        final FlashCardFragment that = this;
+    private void initPathView(PathView pathView) {
+        pathView.setPathWidth(16);
+        pathView.setPaths(paths);
+        pathView.setPathColor(R.color.colorPrimary);
+    }
+
+    public void setFabClickListener() {
+        //animationFinished = true;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                that.flipCard(null);
+                if (animationFinished) {
+//                    mCardFrontLayout.removeAllViews();
+//                    LayoutInflater inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
+//                    View childLayout = inflater.inflate(R.layout.card_front,null);
+//                    mCardFrontLayout.addView(childLayout);
+//                    fab = childLayout.findViewById(R.id.fab);
+//                    setFabClickListener();
+//
+                    PathView pathView = mCardFrontLayout.findViewById(R.id.path_view);
+//                    initPathView(pathView);
+                    animatePath(pathView, duration);
+                }
             }
         });
     }
@@ -176,38 +204,7 @@ public class FlashCardFragment extends Fragment {
         }
     }
 
-    private void initPathView(PathView pathView, final List<Path> paths) {
-        final float duration = getDuration(paths, 1.1f);
-
-        pathView.setPathWidth(16);
-        pathView.setPaths(paths);
-        pathView.setPathColor(R.color.colorPrimary);
-
-        //animate(pathView, 10);
-        pathView.getPathAnimator()
-                .duration(0)
-                .start();
-
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (animationFinished) {
-                    FrameLayout drawingView = ((KanaAnimationActivity) context).findViewById(R.id.card_front);
-                    drawingView.removeAllViews();
-                    LayoutInflater inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
-                    View childLayout = inflater.inflate(R.layout.card_front,
-                            null);
-                    drawingView.addView(childLayout);
-
-                    PathView pathView = ((KanaAnimationActivity) context).findViewById(R.id.path_view);
-                    initPathView(pathView, paths);
-                    animate(pathView, duration);
-                }
-            }
-        });
-    }
-
-    private void animate(PathView pathView, float duration) {
+    public void animatePath(PathView pathView, float duration) {
         pathView.getSequentialPathAnimator()
                 .delay(300)
                 .duration((int) duration)
@@ -225,7 +222,5 @@ public class FlashCardFragment extends Fragment {
                     }
                 })
                 .start();
-
     }
-
 }

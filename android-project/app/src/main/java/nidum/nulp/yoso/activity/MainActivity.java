@@ -12,6 +12,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     private KanaRepository kanaRepository;
     private boolean isHiragana = true;
+    List<KanaFragment> fragments = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,9 @@ public class MainActivity extends AppCompatActivity {
                         other.setText(tmp);
                     }
                 }
+                for (KanaFragment fragment : fragments) {
+                    fragment.updateIsHiragana();
+                }
             }
         });
 
@@ -85,11 +90,11 @@ public class MainActivity extends AppCompatActivity {
             FragmentManager fragmentManager = getFragmentManager();
             do {
                 Kana kana = allKana.get(i);
-                Fragment fragment = KanaFragment.newInstance(R.drawable.sakura_fine, kana, isHiragana);
+                KanaFragment fragment = KanaFragment.newInstance(R.drawable.sakura_fine, kana, this.isHiragana);
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.add(row.getId(), fragment);
                 fragmentTransaction.commit();
-
+                fragments.add(fragment);
                 i++;
                 if (i == allKana.size() - 1) {
                     break;
