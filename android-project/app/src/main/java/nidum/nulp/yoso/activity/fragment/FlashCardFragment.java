@@ -23,6 +23,7 @@ import java.io.IOException;
 import java.util.List;
 
 import nidum.nulp.yoso.entity.Kana;
+import nidum.nulp.yoso.entity.enumeration.EntityType;
 import nidum.nulp.yoso.kanjivg.KanaPathProvider;
 import nidum.nulp.yoso_project.R;
 
@@ -50,8 +51,7 @@ public class FlashCardFragment extends Fragment {
     private FloatingActionButton fab;
 
     private Kana kana;
-    private boolean isHiragana;
-    private boolean singleReading = true;
+    private EntityType entityType;
 
     private List<Path> paths;
     private float duration;
@@ -59,10 +59,10 @@ public class FlashCardFragment extends Fragment {
     public FlashCardFragment() {
     }
 
-    public static FlashCardFragment newInstance(Kana kana, boolean isHiragana) {
+    public static FlashCardFragment newInstance(Kana kana, EntityType entityType) {
         FlashCardFragment fragment = new FlashCardFragment();
         fragment.kana = kana;
-        fragment.isHiragana = isHiragana;
+        fragment.entityType = entityType;
         return fragment;
     }
 
@@ -94,10 +94,19 @@ public class FlashCardFragment extends Fragment {
         kanaPathProvider = new KanaPathProvider(context);
 
         try {
-            if (isHiragana) {
-                paths = kanaPathProvider.buildPaths(kana.getHiragana().charAt(0), 350);
-            } else {
-                paths = kanaPathProvider.buildPaths(kana.getKatakana().charAt(0), 350);
+            switch (entityType) {
+                case HIRAGANA:
+                    paths = kanaPathProvider.buildPaths(kana.getHiragana().charAt(0), 350);
+                    break;
+                case KATAKANA:
+                    paths = kanaPathProvider.buildPaths(kana.getKatakana().charAt(0), 350);
+                    break;
+                case RADICAL:
+                    //TODO:
+                    break;
+                case KANJI:
+                    //TODO:
+                    break;
             }
             duration = getDuration(paths, 1.1f);
         } catch (IOException | XmlPullParserException e) {
@@ -175,21 +184,37 @@ public class FlashCardFragment extends Fragment {
     }
 
     private void initText() {
-        if (singleReading) {
-            if (isHiragana) {
+        String onReading = "";
+
+        switch (entityType) {
+            case HIRAGANA:
                 kanjiView.setText(kana.getHiragana());
-            } else {
+                onReading = kana.getReading();
+                handleSingleReading();
+                break;
+            case KATAKANA:
                 kanjiView.setText(kana.getKatakana());
-            }
-            onView.setText(kana.getReading());
-            onView.setTextSize(36);
-            kunView.setVisibility(View.INVISIBLE);
-            meaningView.setVisibility(View.INVISIBLE);
-            kanjiView.setPadding(0, 350, 0, 0);
-            levelImg.setPadding(0, 350, 0, 0);
-        } else {
-            // TODO
+                onReading = kana.getReading();
+                handleSingleReading();
+                break;
+            case RADICAL:
+                //TODO:
+                break;
+            case KANJI:
+                //TODO:
+                break;
         }
+
+        onView.setText(onReading);
+
+    }
+
+    private void handleSingleReading(){
+        onView.setTextSize(36);
+        kunView.setVisibility(View.INVISIBLE);
+        meaningView.setVisibility(View.INVISIBLE);
+        kanjiView.setPadding(0, 350, 0, 0);
+        levelImg.setPadding(0, 350, 0, 0);
     }
 
     public void animatePath(PathView pathView, float duration) {

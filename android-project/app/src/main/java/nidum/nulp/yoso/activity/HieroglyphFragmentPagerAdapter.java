@@ -11,14 +11,15 @@ import java.util.List;
 
 import nidum.nulp.yoso.activity.fragment.FlashCardFragment;
 import nidum.nulp.yoso.entity.Kana;
+import nidum.nulp.yoso.entity.enumeration.EntityType;
 import nidum.nulp.yoso.repository.KanaRepository;
 
-public class KanaFragmentPagerAdapter extends FragmentPagerAdapter {
+public class HieroglyphFragmentPagerAdapter extends FragmentPagerAdapter {
 
     private List<Kana> kanaList;
-    private boolean isHiragana;
+    private EntityType entityType;
 
-    public KanaFragmentPagerAdapter(FragmentManager fm, KanaRepository kanaRepository, boolean isHiragana) {
+    public HieroglyphFragmentPagerAdapter(FragmentManager fm, KanaRepository kanaRepository, EntityType entityType) {
         super(fm);
         kanaList = kanaRepository.getAllKana();
         Collections.sort(kanaList, new Comparator<Kana>() {
@@ -27,14 +28,14 @@ public class KanaFragmentPagerAdapter extends FragmentPagerAdapter {
                 return o1.getOrder() - o2.getOrder();
             }
         });
-        this.isHiragana = isHiragana;
+        this.entityType = entityType;
     }
 
     @Override
     public Fragment getItem(int position) {
         Kana kana = kanaList.get(position);
 
-        FlashCardFragment flashCardFragment = FlashCardFragment.newInstance(kana, isHiragana);
+        FlashCardFragment flashCardFragment = FlashCardFragment.newInstance(kana, entityType);
         return flashCardFragment;
     }
 
@@ -42,10 +43,6 @@ public class KanaFragmentPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return kanaList.size();
-    }
-
-    public void setHiragana(boolean hiragana) {
-        isHiragana = hiragana;
     }
 
     public List<Kana> getKanaList() {

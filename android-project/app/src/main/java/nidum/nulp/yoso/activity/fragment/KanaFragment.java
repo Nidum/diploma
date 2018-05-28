@@ -11,8 +11,11 @@ import android.widget.TextView;
 
 import nidum.nulp.yoso.activity.HieroglyphAnimationActivity;
 import nidum.nulp.yoso.entity.Kana;
+import nidum.nulp.yoso.entity.enumeration.EntityType;
 import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 import nidum.nulp.yoso_project.R;
+
+import static nidum.nulp.yoso.utill.IntentHolder.ARG_HIEROGLYPH_TYPE;
 
 public class KanaFragment extends Fragment {
 
@@ -20,7 +23,6 @@ public class KanaFragment extends Fragment {
     public static final String ARG_KANA_OTHER = "kana_other";
     public static final String ARG_KANA_READING = "kana_reading";
     public static final String ARG_KANA_ORDER = "kana_order";
-    public static final String IS_HIRAGANA = "is_hiragana";
     public static final String ARG_STUDY_LEVEL = "noryoku_level";
 
     private ImageView masteringImageView;
@@ -43,7 +45,11 @@ public class KanaFragment extends Fragment {
             args.putInt(ARG_STUDY_LEVEL, kana.getKatakanaStudyLevel().ordinal());
         }
         args.putString(ARG_KANA_READING, kana.getReading());
-        args.putBoolean(IS_HIRAGANA, isHiragana);
+        if(isHiragana) {
+            args.putString(ARG_HIEROGLYPH_TYPE, EntityType.HIRAGANA.name());
+        } else {
+            args.putString(ARG_HIEROGLYPH_TYPE, EntityType.KATAKANA.name());
+        }
         args.putInt(ARG_KANA_ORDER, kana.getOrder());
         fragment.setArguments(args);
         return fragment;
@@ -75,7 +81,7 @@ public class KanaFragment extends Fragment {
                 intent.putExtra(ARG_KANA_CURRENT, currentKanaTextView.getText());
                 intent.putExtra(ARG_KANA_READING, readingTextView.getText());
                 intent.putExtra(ARG_KANA_ORDER, arguments.getInt(ARG_KANA_ORDER));
-                intent.putExtra(IS_HIRAGANA, arguments.getBoolean(IS_HIRAGANA));
+                intent.putExtra(ARG_HIEROGLYPH_TYPE, arguments.getString(ARG_HIEROGLYPH_TYPE));
                 startActivity(intent);
             }
         });
@@ -89,6 +95,12 @@ public class KanaFragment extends Fragment {
     }
 
     public void updateIsHiragana(){
-        this.arguments.putBoolean(IS_HIRAGANA, !arguments.getBoolean(IS_HIRAGANA));
+        String name = arguments.getString(ARG_HIEROGLYPH_TYPE);
+        EntityType type = EntityType.valueOf(name);
+        if(type == EntityType.HIRAGANA) {
+            this.arguments.putString(ARG_HIEROGLYPH_TYPE, EntityType.KATAKANA.name());
+        } else {
+            this.arguments.putString(ARG_HIEROGLYPH_TYPE, EntityType.HIRAGANA.name());
+        }
     }
 }

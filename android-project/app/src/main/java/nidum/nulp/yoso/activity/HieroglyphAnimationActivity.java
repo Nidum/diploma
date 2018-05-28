@@ -12,19 +12,22 @@ import java.util.Date;
 
 import nidum.nulp.yoso.activity.fragment.KanaFragment;
 import nidum.nulp.yoso.entity.Kana;
+import nidum.nulp.yoso.entity.enumeration.EntityType;
 import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 import nidum.nulp.yoso.repository.DBHelper;
 import nidum.nulp.yoso.repository.KanaRepository;
 import nidum.nulp.yoso_project.R;
 
+import static nidum.nulp.yoso.utill.IntentHolder.ARG_HIEROGLYPH_TYPE;
+
 public class HieroglyphAnimationActivity extends AppCompatActivity {
     private ViewPager pager;
-    private KanaFragmentPagerAdapter pagerAdapter;
+    private HieroglyphFragmentPagerAdapter pagerAdapter;
     private Button rememberBtn;
     private Button forgotBtn;
 
     private KanaRepository kanaRepository;
-    private boolean isHiragana;
+    private EntityType entityType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +37,12 @@ public class HieroglyphAnimationActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
-        isHiragana = intent.getBooleanExtra(KanaFragment.IS_HIRAGANA, true);
+        entityType = EntityType.valueOf(intent.getStringExtra(ARG_HIEROGLYPH_TYPE));
         int position = intent.getIntExtra(KanaFragment.ARG_KANA_ORDER, 0) - 1;
 
         findViews();
         kanaRepository = new KanaRepository(new DBHelper(this));
-        pagerAdapter = new KanaFragmentPagerAdapter(getSupportFragmentManager(), kanaRepository, isHiragana);
+        pagerAdapter = new HieroglyphFragmentPagerAdapter(getSupportFragmentManager(), kanaRepository, entityType);
 
         pager.setAdapter(pagerAdapter);
         pager.setCurrentItem(position);
@@ -66,14 +69,26 @@ public class HieroglyphAnimationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Kana kana = pagerAdapter.getKanaList().get(pager.getCurrentItem());
-                if (isHiragana) {
-                    kana.setHiraganaLastReviewed(-1);
-                    kana.setHiraganaStudyLevel(StudyLevel.NONE);
-                } else {
-                    kana.setKatakanaLastReviewed(-1);
-                    kana.setKatakanaStudyLevel(StudyLevel.NONE);
+                switch (entityType){
+                    case HIRAGANA:
+                        kana.setHiraganaLastReviewed(-1);
+                        kana.setHiraganaStudyLevel(StudyLevel.NONE);
+                        kanaRepository.updateKanaStudyData(kana);
+                        break;
+                    case KATAKANA:
+                        kana.setKatakanaLastReviewed(-1);
+                        kana.setKatakanaStudyLevel(StudyLevel.NONE);
+                        kanaRepository.updateKanaStudyData(kana);
+                        break;
+                    case KANJI:
+                        //TODO:
+                        break;
+                    case RADICAL:
+                        //TODO:
+                        break;
                 }
-                kanaRepository.updateKanaStudyData(kana);
+
+
                 manageRememberLogic();
             }
         });
@@ -82,16 +97,28 @@ public class HieroglyphAnimationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Kana kana = pagerAdapter.getKanaList().get(pager.getCurrentItem());
-                if (isHiragana) {
-                    kana.setHiraganaLastReviewed(new Date().getTime());
-                    StudyLevel studyLevel = StudyLevel.values()[kana.getHiraganaStudyLevel().ordinal() + 1];
-                    kana.setHiraganaStudyLevel(studyLevel);
-                } else {
-                    kana.setKatakanaLastReviewed(new Date().getTime());
-                    StudyLevel studyLevel = StudyLevel.values()[kana.getKatakanaStudyLevel().ordinal() + 1];
-                    kana.setKatakanaStudyLevel(studyLevel);
+                StudyLevel studyLevel;
+                switch (entityType){
+                    case HIRAGANA:
+                        kana.setHiraganaLastReviewed(new Date().getTime());
+                        studyLevel = StudyLevel.values()[kana.getHiraganaStudyLevel().ordinal() + 1];
+                        kana.setHiraganaStudyLevel(studyLevel);
+                        kanaRepository.updateKanaStudyData(kana);
+                        break;
+                    case KATAKANA:
+                        kana.setKatakanaLastReviewed(new Date().getTime());
+                        studyLevel = StudyLevel.values()[kana.getKatakanaStudyLevel().ordinal() + 1];
+                        kana.setKatakanaStudyLevel(studyLevel);
+                        kanaRepository.updateKanaStudyData(kana);
+                        break;
+                    case KANJI:
+                        //TODO:
+                        break;
+                    case RADICAL:
+                        //TODO:
+                        break;
                 }
-                kanaRepository.updateKanaStudyData(kana);
+
                 manageRememberLogic();
             }
         });
@@ -120,15 +147,24 @@ public class HieroglyphAnimationActivity extends AppCompatActivity {
         int currentItem = pager.getCurrentItem();
         Kana kana = pagerAdapter.getKanaList().get(currentItem);
 
-        long lastReviewed;
-        StudyLevel studyLevel;
+        long lastReviewed = 0L;
+        StudyLevel studyLevel = StudyLevel.NONE;
 
-        if (isHiragana) {
-            lastReviewed = kana.getHiraganaLastReviewed();
-            studyLevel = kana.getHiraganaStudyLevel();
-        } else {
-            lastReviewed = kana.getKatakanaLastReviewed();
-            studyLevel = kana.getKatakanaStudyLevel();
+        switch (entityType){
+            case HIRAGANA:
+                lastReviewed = kana.getHiraganaLastReviewed();
+                studyLevel = kana.getHiraganaStudyLevel();
+                break;
+            case KATAKANA:
+                lastReviewed = kana.getKatakanaLastReviewed();
+                studyLevel = kana.getKatakanaStudyLevel();
+                break;
+            case KANJI:
+                //TODO:
+                break;
+            case RADICAL:
+                //TODO:
+                break;
         }
 
         long timeToNextReview = studyLevel.getTimeToNextReview();
