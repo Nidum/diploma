@@ -1,6 +1,5 @@
 package nidum.nulp.yoso.activity;
 
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
@@ -15,14 +14,24 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.EnumMap;
 import java.util.List;
 
 import nidum.nulp.yoso.activity.fragment.KanaFragment;
 import nidum.nulp.yoso.entity.Kana;
+import nidum.nulp.yoso.entity.enumeration.NoryokuLevel;
+import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 import nidum.nulp.yoso.repository.DBHelper;
 import nidum.nulp.yoso.repository.KanaRepository;
+import nidum.nulp.yoso.repository.KanjiRepository;
 import nidum.nulp.yoso.utill.ResourceLoader;
 import nidum.nulp.yoso_project.R;
+
+import static java.lang.String.format;
+import static nidum.nulp.yoso.entity.enumeration.StudyLevel.FINE;
+import static nidum.nulp.yoso.entity.enumeration.StudyLevel.LOW;
+import static nidum.nulp.yoso.entity.enumeration.StudyLevel.MASTERED;
+import static nidum.nulp.yoso.entity.enumeration.StudyLevel.MIDDLE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private TableLayout mKanaTable;
 
     private KanaRepository kanaRepository;
+    private KanjiRepository kanjiRepository;
     private boolean isHiragana = true;
     List<KanaFragment> fragments = new ArrayList<>();
 
@@ -43,7 +53,9 @@ public class MainActivity extends AppCompatActivity {
 
         NavigationUtil.initNavigation(this, this);
 
-        kanaRepository = new KanaRepository(new DBHelper(this));
+        DBHelper dbHelper = new DBHelper(this);
+        kanaRepository = new KanaRepository(dbHelper);
+        kanjiRepository = new KanjiRepository(dbHelper, NoryokuLevel.ALL);
         mKanaTable = findViewById(R.id.kana_table);
         initKanaTable();
 
@@ -67,11 +79,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     private void initKanaTable() {
-        List<Kana> allKana = kanaRepository.getAllKana();
+        List<Kana> allKana = kanaRepository.getAll();
 
         Collections.sort(allKana, new Comparator<Kana>() {
             @Override
@@ -105,6 +116,19 @@ public class MainActivity extends AppCompatActivity {
             j++;
             i--;
         }
+    }
+
+    private void initProgressMenu(){
+        EnumMap<StudyLevel, Integer> studyLevelIntegerEnumMap = kanjiRepository.countByLevel();
+
+        TextView lowProgress = findViewById(R.id.low_progress);
+        lowProgress.setText(format("%d", studyLevelIntegerEnumMap.get(LOW)));
+        TextView midProgress = findViewById(R.id.middle_progress);
+        midProgress.setText(format("%d", studyLevelIntegerEnumMap.get(MIDDLE)));
+        TextView fineProgress = findViewById(R.id.fine_progress);
+        fineProgress.setText(format("%d", studyLevelIntegerEnumMap.get(FINE)));
+        TextView masteredProgress = findViewById(R.id.mastered_progress);
+        masteredProgress.setText(format("%d", studyLevelIntegerEnumMap.get(MASTERED)));
     }
 
     @Override

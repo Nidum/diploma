@@ -2,7 +2,7 @@ package nidum.nulp.yoso.entity;
 
 import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 
-public class Radical {
+public class Radical extends Hieroglyph {
     private String radical;
     private String meaning;
     private String reading;

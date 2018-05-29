@@ -4,12 +4,14 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import nidum.nulp.yoso.entity.Kana;
 import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 
-public class KanaRepository {
+public class KanaRepository implements Repository<Kana> {
     private static String KANA_TABLE = "kana";
     private static String READING_COLUMN = "reading";
     private static String HIRAGANA_COLUMN = "hiragana";
@@ -22,16 +24,17 @@ public class KanaRepository {
 
     private DBHelper helper;
 
-    public KanaRepository(DBHelper helper){
+    public KanaRepository(DBHelper helper) {
         this.helper = helper;
     }
 
-    public List<Kana> getAllKana(){
+    @Override
+    public List<Kana> getAll() {
         SQLiteDatabase db = helper.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from " + KANA_TABLE, null);
 
         List<Kana> kanaList = new ArrayList<>();
-        if (cursor.moveToFirst()){
+        if (cursor.moveToFirst()) {
             do {
                 String reading = cursor.getString(cursor.getColumnIndex(READING_COLUMN));
                 String hiragana = cursor.getString(cursor.getColumnIndex(HIRAGANA_COLUMN));
@@ -48,16 +51,22 @@ public class KanaRepository {
 
                 kanaList.add(new Kana(reading, hiragana, katakana, order, studyLevelHiragana,
                         lastReviewedHiragana, studyLevelKatakana, lastReviewedKatakana));
-            } while(cursor.moveToNext());
+            } while (cursor.moveToNext());
         }
 
         cursor.close();
         db.close();
 
+        Collections.sort(kanaList, new Comparator<Kana>() {
+            @Override
+            public int compare(Kana o1, Kana o2) {
+                return o1.getOrder() - o2.getOrder();
+            }
+        });
         return kanaList;
     }
 
-    public void updateKanaStudyData(Kana kana){
+    public void updateStudyData(Kana kana) {
         String updateQuery = String.format("UPDATE %s SET %s = %d, %s = \'%s\', %s = %d, %s = \'%s\' WHERE hiragana = \'%s\'",
                 KANA_TABLE,
                 LAST_REVIEWED_HIRAGANA_COLUMN, kana.getHiraganaLastReviewed(),

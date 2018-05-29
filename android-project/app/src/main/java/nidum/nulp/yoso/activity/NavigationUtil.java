@@ -8,8 +8,18 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.view.MenuItem;
+import android.widget.TextView;
 
+import java.util.EnumMap;
+
+import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 import nidum.nulp.yoso_project.R;
+
+import static java.lang.String.format;
+import static nidum.nulp.yoso.entity.enumeration.StudyLevel.FINE;
+import static nidum.nulp.yoso.entity.enumeration.StudyLevel.LOW;
+import static nidum.nulp.yoso.entity.enumeration.StudyLevel.MASTERED;
+import static nidum.nulp.yoso.entity.enumeration.StudyLevel.MIDDLE;
 
 public class NavigationUtil {
     public static void initNavigation(final Context context, final Activity caller) {
@@ -28,8 +38,8 @@ public class NavigationUtil {
                         } else if (id == R.id.nav_radicals) {
                             Intent intent = new Intent(context, RadicalsListActivity.class);
                             context.startActivity(intent);
-                        } else if (id == R.id.nav_kanji && !(caller instanceof KanjiActivity)) {
-                            Intent intent = new Intent(context, KanjiActivity.class);
+                        } else if (id == R.id.nav_kanji && !(caller instanceof KanjiLevelListActivity)) {
+                            Intent intent = new Intent(context, KanjiLevelListActivity.class);
                             context.startActivity(intent);
                         } else if (id == R.id.nav_flashcards) {
 

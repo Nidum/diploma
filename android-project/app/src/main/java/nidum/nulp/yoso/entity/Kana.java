@@ -3,7 +3,7 @@ package nidum.nulp.yoso.entity;
 
 import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 
-public class Kana {
+public class Kana extends Hieroglyph {
     private String reading;
     private String hiragana;
     private String katakana;

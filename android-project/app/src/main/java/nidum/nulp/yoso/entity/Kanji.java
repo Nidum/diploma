@@ -3,7 +3,7 @@ package nidum.nulp.yoso.entity;
 import nidum.nulp.yoso.entity.enumeration.NoryokuLevel;
 import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 
-public class Kanji {
+public class Kanji extends Hieroglyph {
     private String kanji;
     private String onyomiReading;
     private String kunyomiReading;

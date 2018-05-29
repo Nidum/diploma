@@ -20,15 +20,10 @@
             android:name="nidum.nulp.yoso.activity.HieroglyphAnimationActivity"
             android:label="@string/title_activity_kana_animation"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="nidum.nulp.yoso.TestNavigationActivityOMG"
-            android:label="@string/title_activity_test_navigation_omg"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="nidum.nulp.yoso.activity.KanjiActivity" />
+        <activity android:name="nidum.nulp.yoso.activity.KanjiLevelListActivity" />
         <activity
             android:name="nidum.nulp.yoso.activity.RadicalsListActivity"
-            android:label="@string/title_activity_radicals"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_radicals"/>
         <activity android:name="nidum.nulp.yoso.activity.KanjiListActivity"></activity>
     </application>
 

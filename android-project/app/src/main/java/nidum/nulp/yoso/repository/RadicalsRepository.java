@@ -4,12 +4,16 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
+import nidum.nulp.yoso.entity.Kana;
+import nidum.nulp.yoso.entity.Kanji;
 import nidum.nulp.yoso.entity.Radical;
 import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 
-public class RadicalsRepository {
+public class RadicalsRepository implements Repository<Radical> {
     private static String RADICALS_TABLE = "radicals";
     private static String STROKE_COLUMN = "stroke";
     private static String RADICAL_COLUMN = "radical";
@@ -26,7 +30,8 @@ public class RadicalsRepository {
         this.helper = helper;
     }
 
-    public List<Radical> getAllRadicals() {
+    @Override
+    public List<Radical> getAll() {
         SQLiteDatabase db = helper.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from " + RADICALS_TABLE, null);
 
@@ -50,6 +55,19 @@ public class RadicalsRepository {
         cursor.close();
         db.close();
 
+        Collections.sort(radicalsList, new Comparator<Radical>() {
+            @Override
+            public int compare(Radical o1, Radical o2) {
+                return o1.getStrokes() - o2.getStrokes();
+            }
+        });
         return radicalsList;
     }
+
+    @Override
+    public void updateStudyData(Radical hieroglyph) {
+
+    }
+
+
 }

@@ -16,13 +16,13 @@ import nidum.nulp.yoso.entity.enumeration.StudyLevel;
 import nidum.nulp.yoso_project.R;
 
 import static nidum.nulp.yoso.utill.IntentHolder.ARG_HIEROGLYPH_TYPE;
+import static nidum.nulp.yoso.utill.IntentHolder.ARG_ORDER;
 
 public class KanaFragment extends Fragment {
 
     public static final String ARG_KANA_CURRENT = "kana_current";
     public static final String ARG_KANA_OTHER = "kana_other";
     public static final String ARG_KANA_READING = "kana_reading";
-    public static final String ARG_KANA_ORDER = "kana_order";
     public static final String ARG_STUDY_LEVEL = "noryoku_level";
 
     private ImageView masteringImageView;
@@ -50,7 +50,7 @@ public class KanaFragment extends Fragment {
         } else {
             args.putString(ARG_HIEROGLYPH_TYPE, EntityType.KATAKANA.name());
         }
-        args.putInt(ARG_KANA_ORDER, kana.getOrder());
+        args.putInt(ARG_ORDER, kana.getOrder());
         fragment.setArguments(args);
         return fragment;
     }
@@ -80,7 +80,7 @@ public class KanaFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), HieroglyphAnimationActivity.class);
                 intent.putExtra(ARG_KANA_CURRENT, currentKanaTextView.getText());
                 intent.putExtra(ARG_KANA_READING, readingTextView.getText());
-                intent.putExtra(ARG_KANA_ORDER, arguments.getInt(ARG_KANA_ORDER));
+                intent.putExtra(ARG_ORDER, arguments.getInt(ARG_ORDER));
                 intent.putExtra(ARG_HIEROGLYPH_TYPE, arguments.getString(ARG_HIEROGLYPH_TYPE));
                 startActivity(intent);
             }

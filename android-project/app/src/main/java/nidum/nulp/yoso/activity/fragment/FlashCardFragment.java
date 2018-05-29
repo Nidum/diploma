@@ -22,9 +22,12 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.List;
 
+import nidum.nulp.yoso.entity.Hieroglyph;
 import nidum.nulp.yoso.entity.Kana;
+import nidum.nulp.yoso.entity.Kanji;
+import nidum.nulp.yoso.entity.Radical;
 import nidum.nulp.yoso.entity.enumeration.EntityType;
-import nidum.nulp.yoso.kanjivg.KanaPathProvider;
+import nidum.nulp.yoso.kanjivg.HieroglyphPathProvider;
 import nidum.nulp.yoso_project.R;
 
 import static nidum.nulp.yoso.kanjivg.DurationGenerator.getDuration;
@@ -38,7 +41,7 @@ public class FlashCardFragment extends Fragment {
     private AnimatorSet mSetRightOut;
     private AnimatorSet mSetLeftIn;
 
-    private KanaPathProvider kanaPathProvider;
+    private HieroglyphPathProvider pathProvider;
     private TextView kanjiView;
     private TextView meaningView;
     private TextView onView;
@@ -50,7 +53,7 @@ public class FlashCardFragment extends Fragment {
     private FrameLayout mCardBackLayout;
     private FloatingActionButton fab;
 
-    private Kana kana;
+    private Hieroglyph hieroglyph;
     private EntityType entityType;
 
     private List<Path> paths;
@@ -59,9 +62,9 @@ public class FlashCardFragment extends Fragment {
     public FlashCardFragment() {
     }
 
-    public static FlashCardFragment newInstance(Kana kana, EntityType entityType) {
+    public static FlashCardFragment newInstance(Hieroglyph hieroglyph, EntityType entityType) {
         FlashCardFragment fragment = new FlashCardFragment();
-        fragment.kana = kana;
+        fragment.hieroglyph = hieroglyph;
         fragment.entityType = entityType;
         return fragment;
     }
@@ -91,21 +94,21 @@ public class FlashCardFragment extends Fragment {
 
         PathView pathView = fragmentView.findViewById(R.id.path_view);
         layout = fragmentView.findViewById(R.id.animation_layout);
-        kanaPathProvider = new KanaPathProvider(context);
+        pathProvider = new HieroglyphPathProvider(context);
 
         try {
             switch (entityType) {
                 case HIRAGANA:
-                    paths = kanaPathProvider.buildPaths(kana.getHiragana().charAt(0), 350);
+                    paths = pathProvider.buildPaths(((Kana)hieroglyph).getHiragana().charAt(0), 350);
                     break;
                 case KATAKANA:
-                    paths = kanaPathProvider.buildPaths(kana.getKatakana().charAt(0), 350);
+                    paths = pathProvider.buildPaths(((Kana)hieroglyph).getKatakana().charAt(0), 350);
                     break;
                 case RADICAL:
-                    //TODO:
+                    paths = pathProvider.buildPaths(((Radical)hieroglyph).getRadical().charAt(0), 350);
                     break;
                 case KANJI:
-                    //TODO:
+                    paths = pathProvider.buildPaths(((Kanji)hieroglyph).getKanji().charAt(0), 350);
                     break;
             }
             duration = getDuration(paths, 1.1f);
@@ -187,34 +190,55 @@ public class FlashCardFragment extends Fragment {
         String onReading = "";
 
         switch (entityType) {
-            case HIRAGANA:
+            case HIRAGANA: {
+                Kana kana = (Kana) hieroglyph;
                 kanjiView.setText(kana.getHiragana());
                 onReading = kana.getReading();
                 handleSingleReading();
+                meaningView.setVisibility(View.INVISIBLE);
                 break;
-            case KATAKANA:
+            }
+            case KATAKANA: {
+                Kana kana = (Kana) hieroglyph;
                 kanjiView.setText(kana.getKatakana());
                 onReading = kana.getReading();
                 handleSingleReading();
+                meaningView.setVisibility(View.INVISIBLE);
                 break;
+            }
             case RADICAL:
-                //TODO:
+                Radical radical = (Radical) hieroglyph;
+                kanjiView.setText(radical.getRadical());
+                onReading = radical.getReading();
+                handleSingleReading();
+                meaningView.setText(radical.getMeaning());
                 break;
             case KANJI:
-                //TODO:
+                Kanji kanji = (Kanji) hieroglyph;
+                kanjiView.setText(kanji.getKanji());
+                onView.setText(String.format("On: %s", kanji.getOnyomiReading().replaceAll(" ", "    ")));
+                kunView.setText(String.format("Kun: %s", kanji.getKunyomiReading().replaceAll(" ", "    ")));
+                meaningView.setText(String.format("Meanings: %s",kanji.getMeaning()));
+                handleManyReadings();
                 break;
         }
 
         onView.setText(onReading);
-
     }
 
     private void handleSingleReading(){
         onView.setTextSize(36);
         kunView.setVisibility(View.INVISIBLE);
-        meaningView.setVisibility(View.INVISIBLE);
         kanjiView.setPadding(0, 350, 0, 0);
         levelImg.setPadding(0, 350, 0, 0);
+    }
+
+    private void handleManyReadings(){
+        onView.setTextSize(20);
+        kunView.setVisibility(View.VISIBLE);
+        onView.setVisibility(View.VISIBLE);
+        kanjiView.setPadding(0, 0, 0, 0);
+        levelImg.setPadding(0, 0, 0, 0);
     }
 
     public void animatePath(PathView pathView, float duration) {

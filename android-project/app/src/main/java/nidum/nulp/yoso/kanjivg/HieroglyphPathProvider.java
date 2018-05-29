@@ -10,11 +10,11 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.List;
 
-public class KanaPathProvider {
+public class HieroglyphPathProvider {
 
     private Context context;
 
-    public KanaPathProvider(Context context){
+    public HieroglyphPathProvider(Context context){
         this.context = context;
     }
 

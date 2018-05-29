@@ -7,7 +7,8 @@ public enum NoryokuLevel {
     N2(R.drawable.lotus_n2),
     N3(R.drawable.lotus_n3),
     N4(R.drawable.lotus_n4),
-    N5(R.drawable.lotus_n5);
+    N5(R.drawable.lotus_n5),
+    ALL(R.drawable.sakura_none);
 
     private int imgId;
 
