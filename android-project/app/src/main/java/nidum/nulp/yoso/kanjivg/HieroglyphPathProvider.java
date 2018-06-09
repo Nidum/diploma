@@ -14,18 +14,12 @@ public class HieroglyphPathProvider {
 
     private Context context;
 
-    public HieroglyphPathProvider(Context context){
+    public HieroglyphPathProvider(Context context) {
         this.context = context;
     }
 
     public List<Path> buildPaths(char character, int width) throws IOException, XmlPullParserException {
-        StringBuilder fileName = new StringBuilder(Integer.toHexString(character));
-        while(fileName.length() < 5){
-            fileName.insert(0, '0');
-        }
-        fileName.insert(0, "kanji");
-
-        int kanaID = context.getResources().getIdentifier(fileName.toString(), "xml", context.getPackageName());
+        int kanaID = context.getResources().getIdentifier(KanjiFileNameGenerator.getFileName(character), "xml", context.getPackageName());
         XmlResourceParser xml = context.getResources().getXml(kanaID);
 
         return parseFile(xml, width);
@@ -38,9 +32,9 @@ public class HieroglyphPathProvider {
 
         while (eventType != XmlPullParser.END_DOCUMENT) {
             eventType = xml.getEventType();
-            if(xml.getName()!= null && xml.getName().equals("path")){
+            if (xml.getName() != null && xml.getName().equals("path")) {
                 String d = xml.getAttributeValue(null, "d");
-                if(d != null) {
+                if (d != null) {
                     builder.append(d);
                 }
             }
@@ -50,7 +44,7 @@ public class HieroglyphPathProvider {
         return PathParser.parse(builder.toString(), getResizeCoeficient(width), 250.0f, 30.0f);
     }
 
-    private float getResizeCoeficient(int screenWidth){
+    private float getResizeCoeficient(int screenWidth) {
         return 8f;
     }
 }

@@ -72,21 +72,31 @@ public class KanjiRepository implements Repository<Kanji> {
     }
 
     @Override
-    public void updateStudyData(Kanji hieroglyph) {
+    public void updateStudyData(Kanji kanji) {
+        String updateQuery = String.format("UPDATE %s SET %s = %d, %s = \'%s\' WHERE kanji = \'%s\'",
+                KANJI_TABLE,
+                LAST_REVIEWED_COLUMN, kanji.getLastReviewed(),
+                STUDY_LEVEL_COLUMN, kanji.getStudyLevel().ordinal(),
+                kanji.getKanji());
 
+        SQLiteDatabase db = helper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(updateQuery, null);
+        cursor.moveToFirst();
+        cursor.close();
     }
 
     public EnumMap<StudyLevel, Integer> countByLevel() {
         EnumMap<StudyLevel, Integer> result = new EnumMap<>(StudyLevel.class);
+        result.put(StudyLevel.LOW, 0);
+        result.put(StudyLevel.FINE, 0);
+        result.put(StudyLevel.MIDDLE, 0);
+        result.put(StudyLevel.MASTERED, 0);
+        result.put(StudyLevel.NONE, 0);
 
         List<Kanji> all = getAll();
         for (Kanji kanji : all) {
             StudyLevel studyLevel = kanji.getStudyLevel();
-            if (result.containsKey(studyLevel)) {
-                result.put(studyLevel, result.get(studyLevel) + 1);
-            } else {
-                result.put(studyLevel, 1);
-            }
+            result.put(studyLevel, result.get(studyLevel) + 1);
         }
 
         return result;

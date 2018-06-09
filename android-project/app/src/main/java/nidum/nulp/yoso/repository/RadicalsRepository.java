@@ -65,8 +65,17 @@ public class RadicalsRepository implements Repository<Radical> {
     }
 
     @Override
-    public void updateStudyData(Radical hieroglyph) {
+    public void updateStudyData(Radical radical) {
+        String updateQuery = String.format("UPDATE %s SET %s = %d, %s = \'%s\' WHERE radical = \'%s\'",
+                RADICALS_TABLE,
+                LAST_REVIEWED_COLUMN, radical.getLastReviewed(),
+                STUDY_LEVEL_COLUMN, radical.getStudyLevel().ordinal(),
+                radical.getRadical());
 
+        SQLiteDatabase db = helper.getReadableDatabase();
+        Cursor cursor = db.rawQuery(updateQuery, null);
+        cursor.moveToFirst();
+        cursor.close();
     }
 
 

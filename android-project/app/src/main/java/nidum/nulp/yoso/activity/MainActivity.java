@@ -4,6 +4,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -79,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        initProgressMenu();
     }
 
     private void initKanaTable() {
@@ -119,15 +122,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initProgressMenu(){
+        NavigationView navigationView = findViewById(R.id.nav_view);
         EnumMap<StudyLevel, Integer> studyLevelIntegerEnumMap = kanjiRepository.countByLevel();
 
-        TextView lowProgress = findViewById(R.id.low_progress);
+        TextView lowProgress = navigationView.getHeaderView(0).findViewById(R.id.low_progress);
         lowProgress.setText(format("%d", studyLevelIntegerEnumMap.get(LOW)));
-        TextView midProgress = findViewById(R.id.middle_progress);
+        TextView midProgress = navigationView.getHeaderView(0).findViewById(R.id.middle_progress);
         midProgress.setText(format("%d", studyLevelIntegerEnumMap.get(MIDDLE)));
-        TextView fineProgress = findViewById(R.id.fine_progress);
+        TextView fineProgress = navigationView.getHeaderView(0).findViewById(R.id.fine_progress);
         fineProgress.setText(format("%d", studyLevelIntegerEnumMap.get(FINE)));
-        TextView masteredProgress = findViewById(R.id.mastered_progress);
+        TextView masteredProgress = navigationView.getHeaderView(0).findViewById(R.id.mastered_progress);
         masteredProgress.setText(format("%d", studyLevelIntegerEnumMap.get(MASTERED)));
     }
 

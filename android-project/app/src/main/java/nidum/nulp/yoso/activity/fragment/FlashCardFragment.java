@@ -215,11 +215,11 @@ public class FlashCardFragment extends Fragment {
                 break;
             case KANJI:
                 Kanji kanji = (Kanji) hieroglyph;
+                handleManyReadings();
                 kanjiView.setText(kanji.getKanji());
-                onView.setText(String.format("On: %s", kanji.getOnyomiReading().replaceAll(" ", "    ")));
+                onReading = String.format("On: %s", kanji.getOnyomiReading().replaceAll(" ", "    "));
                 kunView.setText(String.format("Kun: %s", kanji.getKunyomiReading().replaceAll(" ", "    ")));
                 meaningView.setText(String.format("Meanings: %s",kanji.getMeaning()));
-                handleManyReadings();
                 break;
         }
 
@@ -227,18 +227,14 @@ public class FlashCardFragment extends Fragment {
     }
 
     private void handleSingleReading(){
-        onView.setTextSize(36);
+        onView.setTextSize(44);
         kunView.setVisibility(View.INVISIBLE);
-        kanjiView.setPadding(0, 350, 0, 0);
-        levelImg.setPadding(0, 350, 0, 0);
     }
 
     private void handleManyReadings(){
-        onView.setTextSize(20);
         kunView.setVisibility(View.VISIBLE);
         onView.setVisibility(View.VISIBLE);
-        kanjiView.setPadding(0, 0, 0, 0);
-        levelImg.setPadding(0, 0, 0, 0);
+        onView.setTextSize(20);
     }
 
     public void animatePath(PathView pathView, float duration) {

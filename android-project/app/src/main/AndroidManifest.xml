@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="nidum.nulp.yoso.activity.MainActivity">
@@ -18,13 +18,14 @@
         </activity>
         <activity
             android:name="nidum.nulp.yoso.activity.HieroglyphAnimationActivity"
-            android:label="@string/title_activity_kana_animation"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="nidum.nulp.yoso.activity.KanjiLevelListActivity" />
+        <activity android:name="nidum.nulp.yoso.activity.RadicalsListActivity" />
+        <activity android:name="nidum.nulp.yoso.activity.KanjiListActivity" />
+        <activity android:name="nidum.nulp.yoso.activity.InstructionActivity" />
         <activity
-            android:name="nidum.nulp.yoso.activity.RadicalsListActivity"
-            android:label="@string/title_activity_radicals"/>
-        <activity android:name="nidum.nulp.yoso.activity.KanjiListActivity"></activity>
+            android:name="nidum.nulp.yoso.activity.SearchActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

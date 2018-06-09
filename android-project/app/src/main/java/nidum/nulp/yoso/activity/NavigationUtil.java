@@ -41,10 +41,12 @@ public class NavigationUtil {
                         } else if (id == R.id.nav_kanji && !(caller instanceof KanjiLevelListActivity)) {
                             Intent intent = new Intent(context, KanjiLevelListActivity.class);
                             context.startActivity(intent);
-                        } else if (id == R.id.nav_flashcards) {
-
+                        } else if (id == R.id.nav_search) {
+                            Intent intent = new Intent(context, SearchActivity.class);
+                            context.startActivity(intent);
                         } else if (id == R.id.nav_info) {
-
+                            Intent intent = new Intent(context, InstructionActivity.class);
+                            context.startActivity(intent);
                         }
 
                         DrawerLayout drawer = caller.findViewById(R.id.drawer_layout);

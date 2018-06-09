@@ -48,7 +48,17 @@ public class KanjiListActivity extends AppCompatActivity {
         for (int i = 0, j = 0; i < allKanji.size(); i++) {
             FragmentManager fragmentManager = getFragmentManager();
             Kanji kanji = allKanji.get(i);
-            String reading = String.format("On: %s;\nKun: %s", kanji.getKunyomiReading(), kanji.getOnyomiReading());
+            String onyomiReading = kanji.getOnyomiReading();
+            if(onyomiReading.length() > 9){
+                int limit = onyomiReading.lastIndexOf(' ', 9);
+                onyomiReading = onyomiReading.substring(0, limit);
+            }
+            String kunyomiReading = kanji.getKunyomiReading();
+            if(kunyomiReading.length() > 9){
+                int limit = kunyomiReading.lastIndexOf(' ', 9);
+                kunyomiReading = kunyomiReading.substring(0, limit);
+            }
+            String reading = String.format("On: %s;\nKun: %s", kunyomiReading, onyomiReading);
             KanjiRowFragment fragment = KanjiRowFragment.newInstance(kanji.getStudyLevel().getImageId(),
                     reading, kanji.getMeaning(), kanji.getKanji(), EntityType.KANJI, false, i + 1, kanji.getNoryokuLevel());
             fragment.setAppContext(this);

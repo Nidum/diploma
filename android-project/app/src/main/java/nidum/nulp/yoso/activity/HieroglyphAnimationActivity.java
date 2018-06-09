@@ -219,7 +219,7 @@ public class HieroglyphAnimationActivity extends AppCompatActivity {
         if (!(now > lastReviewed + timeToNextReview)) {
             rememberBtn.setClickable(false);
             rememberBtn.setHint("Next review in X days");
-            rememberBtn.setText("Review in X days");
+            rememberBtn.setText("Review in 3 days");
         } else {
             rememberBtn.setClickable(true);
             rememberBtn.setHint("");
